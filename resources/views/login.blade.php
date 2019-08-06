@@ -33,6 +33,13 @@
               <div class="box-footer">
                 <button type="submit" class="btn btn-primary">Submit</button>
               </div>
+              <div class="bg-color-primary">
+                <h4 class="alert alert-warning">
+                  Username:admin@gmail.com<br/>
+                  Password:1234
+                </h4>
+              </div>
+
             </form>
           </div>
         </div>
