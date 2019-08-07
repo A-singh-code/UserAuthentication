@@ -23,8 +23,8 @@ class ForgotpasswordController extends Controller
 			return redirect()->back()->with('message','Email Does not Exists!!');
 		}
 
-		$user = Sentinel::findById($user->id);
-		$reminder = Reminder::exists($user) ? : Reminder::create($user);
+		$sentinelUser = Sentinel::findById($user->id);
+		$reminder = Reminder::exists($sentinelUser) ? : Reminder::create($sentinelUser);
 		$this->sendEmail($user,$reminder->code);
 		return redirect()->back()->with('message','Password Reset Code Sent To Your Mail');
 	}

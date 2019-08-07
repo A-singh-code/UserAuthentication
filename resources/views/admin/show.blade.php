@@ -8,6 +8,7 @@
    <!-- Content Wrapper. Contains page content -->
   <div class="content-wrapper">
     <!-- Content Header (Page header) -->
+    @if(Sentinel::check())
     <section class="content-header">
       <h1>
         User Data
@@ -23,7 +24,7 @@
       <div class="box">
         <div class="box-header with-border">
           
-          <center><a class="btn btn-info" href="{{ route('home.create') }}">ADD NEW USER</a></center>
+          <!-- <center><a class="btn btn-info" href="{{ route('home.create') }}">ADD NEW USER</a></center> -->
           <div class="box-tools pull-right">
             <button type="button" class="btn btn-box-tool" data-widget="collapse" data-toggle="tooltip"
                     title="Collapse">
@@ -91,6 +92,12 @@
       <!-- /.box -->
 
     </section>
+    @else
+      @php
+        header("Location: " . URL::to('/'), true, 302);
+                    exit();
+                  @endphp
+                @endif
     <!-- /.content -->
   </div>
   <!-- /.content-wrapper -->

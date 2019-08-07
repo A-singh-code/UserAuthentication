@@ -11,6 +11,7 @@
             </div>
             <!-- /.box-header -->
             <!-- form start -->
+             @include('layouts.message')
             <form action="/login" method="POST">
               {{csrf_field()}}
               <div class="box-body">
@@ -32,6 +33,7 @@
 
               <div class="box-footer">
                 <button type="submit" class="btn btn-primary">Submit</button>
+                <a href="{{url('/register')}}" class="btn btn-success">Register</a>
               </div>
               <div class="bg-color-primary">
                 <h4 class="alert alert-warning">

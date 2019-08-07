@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Sentinel;
+use App\User;
 class LoginController extends Controller
 {
     //
@@ -15,11 +16,16 @@ class LoginController extends Controller
     public function postlogin(Request $request)
     {
     	Sentinel::authenticate($request->all());
-    	return redirect(route('home.index'));
+    	
+        if(Sentinel::check())
+        {   
+            $users = user::all();
+            return view('admin/show',compact('users'));
+        }
     }
 
     public function logout(){
     	Sentinel::logout();
-    	return redirect('/');
+    	return redirect('/login');
     }
 }

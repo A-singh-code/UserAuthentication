@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers\Admin;
+namespace App\Http\Controllers\Admin\AdminController;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
@@ -100,5 +100,10 @@ class AdminController extends Controller
     public function destroy($id)
     {
         //
+    }
+
+    public function earnings(){
+        return "Salary";
+
     }
 }
