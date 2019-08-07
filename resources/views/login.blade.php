@@ -35,12 +35,7 @@
                 <button type="submit" class="btn btn-primary">Submit</button>
                 <a href="{{url('/register')}}" class="btn btn-success">Register</a>
               </div>
-              <div class="bg-color-primary">
-                <h4 class="alert alert-warning">
-                  Username:admin@gmail.com<br/>
-                  Password:1234
-                </h4>
-              </div>
+              
 
             </form>
           </div>
