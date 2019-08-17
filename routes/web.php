@@ -21,8 +21,8 @@ Route::post('/logout','LoginController@logout');
 Route::get('/forgot_password','ForgotpasswordController@forget');
 Route::post('/forgot_password','ForgotpasswordController@password');
 Route::get('/reset_password/{email}/{code}','ForgotpasswordController@reset');
-Route::get('/earnings','Admin/AdminController@earnings')->middleware('admin');
-Route::group(['namespace'=>'Admin'], function(){
+Route::get('/earnings','Admin/AdminController@earnings')->middleware('manager');
+Route::group(['namespace'=>'Admin','middleware'=>'manager'], function(){
 	Route::resource('admin/home','AdminController');
 	//User Route
 	// Route::resource('user','UserController');

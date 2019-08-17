@@ -27,14 +27,14 @@
                   <label for="email">User Email</label>
                   <input type="email" class="form-control" id="email" value="" name="email" placeholder="Enter Email" required>
                 </div>
-                <!-- <div class="form-group">
+                 <div class="form-group">
                   <label for="role">User Email</label>
                     <select name="role" id="role" class="form-control">
                       @foreach($roles as $role)
                       <option value="{{$role->id}}">{{$role->name}}</option>
                       @endforeach
                     </select>
-                  </div> -->
+                  </div> 
                 <div class="form-group">
                   <label for="password">Password</label>
                   <input type="password" class="form-control" id="password" value="" name="password" placeholder="Enter Password" required>

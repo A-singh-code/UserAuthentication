@@ -27,20 +27,18 @@
                   <label>
                     <a href="{{ URL('/forgot_password')}}">Forget Password?</a>
                   </label>
-                
               </div>
               <!-- /.box-body -->
-
               <div class="box-footer">
                 <button type="submit" class="btn btn-primary">Submit</button>
                 <a href="{{url('/register')}}" class="btn btn-success">Register</a>
               </div>
-              
-
             </form>
           </div>
         </div>
       </div>
     </div>
   </article>
+
+
 @endsection

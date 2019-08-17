@@ -34,3 +34,19 @@
 <script src="{{ asset('admin/dist/js/pages/dashboard.js') }}"></script>
 <!-- AdminLTE for demo purposes -->
 <script src="{{ asset('admin/dist/js/demo.js') }}"></script>
+  <script type="text/javascript">
+  $( document ).ready(function() {
+   
+ $(function() {
+    if (window.history && window.history.pushState) {
+        window.history.pushState('', null, './');
+        $(window).on('popstate', function() {
+            // alert('Back button was pressed.');
+            document.location.href = '/login';
+
+        });
+    }
+});
+
+});
+  </script>

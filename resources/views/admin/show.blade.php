@@ -12,7 +12,6 @@
     <section class="content-header">
       <h1>
         User Data
-        
       </h1>
       
     </section>
@@ -49,7 +48,7 @@
                   
                   <th>Name</th>
                   <th>email</th>
-                  <th>Delete</th>
+                  <th>created date</th>
                 </tr>
                 </thead>
                 <tbody>
@@ -59,20 +58,7 @@
                     
                     <td>{{$user->first_name}}</td>
                     <td>{{$user->email}}</td>
-                    <td>
-                      <form id="delete-form-{{$user->id}}" action="{{ route('home.destroy',$user->id) }}" method="post">
-                        {{ csrf_field() }}
-                        {{ method_field('DELETE') }}
-                        </form>
-                      <a href="" onclick="
-                      if(confirm('Are you sure, You want to delete this post ?'))
-                      {
-                     event.preventDefault();
-                     document.getElementById('delete-form-{{$user->id}}').submit(); 
-                      }
-                   else{
-                   event.preventDefault();
-                 }"><i class="fa fa-trash" aria-hidden="true"></i></i></a></td>
+                    <td>{{$user->created_at}}</td>
                       
                   </tr>
                   @endforeach
@@ -94,7 +80,7 @@
     </section>
     @else
       @php
-        header("Location: " . URL::to('/'), true, 302);
+        header("Location: " . URL::to('/login'), true, 302);
                     exit();
                   @endphp
                 @endif
